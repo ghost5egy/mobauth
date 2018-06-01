@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="authentication">
+    <name>Mobile Authentication - Mobauth</name>
+    <author>Ghost5egy</author>
+    <creationDate>2018</creationDate>
+    <copyright>(C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>ghost5egy@gmail.com</authorEmail>
+    <authorUrl>https://github.com/ghost5egy</authorUrl>
+    <version>1.0</version>
+    <description>Mobauth is An sample authentication plugin that allows users to authenticate with mobile number which inserted in profile of the user </description>
+    <files>
+        <filename plugin="Mobauth">Mobauth.php</filename>
+    </files>
+    <config/>
+</extension>
