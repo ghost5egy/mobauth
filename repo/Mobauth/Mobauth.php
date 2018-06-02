@@ -1,6 +1,6 @@
 <?php
 /**
- * @version    $Id: Mobauth.php 7180 2007-04-23 16:51:53Z jinx $
+ * @version    $Id: Mobauth.php 7180 2018-06-02 16:51:53Z jinx $
  * @package    Joomla.Tutorials
  * @subpackage Plugins
  * @license    GNU/GPL
@@ -47,7 +47,7 @@ class plgAuthenticationMobauth extends JPlugin
 		$queryM = $dbM->getQuery(true)
 			->select('user_id')
 			->from('#__user_profiles')
-			->where('profile_value = ' . $dbM->quote('"'.$credentials['username'].'"'));
+			->where('profile_value = ' . $dbM->quote('"'.$credentials['username'].'"').' AND '.$dbM->quoteName('profile_key').'='.$dbM->quote('profile.phone'));
 		$dbM->setQuery($queryM);
 		$resultM = $dbM->loadObject();
 		
