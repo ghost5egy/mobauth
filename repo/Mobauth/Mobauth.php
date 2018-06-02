@@ -1,7 +1,6 @@
 <?php
 /**
  * @version    $Id: Mobauth.php 7180 2018-06-02 16:51:53Z jinx $
- * @package    Joomla.Tutorials
  * @subpackage Plugins
  * @license    GNU/GPL
  */
