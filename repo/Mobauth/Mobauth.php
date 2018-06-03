@@ -5,6 +5,8 @@
  * @license    GNU/GPL
  */
 
+// writen by ghost5egy
+// https://github.com/ghost5egy/mobauth
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die();
 
@@ -56,7 +58,6 @@ class plgAuthenticationMobauth extends JPlugin
 			->from('#__users')
 			->where('id=' . $resultM->user_id);
 		$db->setQuery($query);
-		JFactory::getApplication()->enqueueMessage($query->__toString); 
 		$result = $db->loadObject();
 		
 		$credentials['username'] = $result->username;
@@ -68,8 +69,8 @@ class plgAuthenticationMobauth extends JPlugin
 			$match = JUserHelper::verifyPassword($credentials['password'], $result->password, $result->id);
 			if ($match === true){
 				jimport( 'joomla.user.authentication');
-		       $auth = & JAuthentication::getInstance();
-		       $response = $auth->authenticate($credentials, $options);
+		       		$auth = & JAuthentication::getInstance();
+		       		$response = $auth->authenticate($credentials, $options);
 			}else{
 				$response->status = JAuthentication::STATUS_FAILURE;
 				$response->error_message = 'Invalid username and password';
